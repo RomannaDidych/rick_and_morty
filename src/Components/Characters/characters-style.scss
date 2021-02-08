@@ -43,3 +43,40 @@
 		font-size: 18px;
 	}
 }
+.buttons{
+	width: 350px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.btn{
+	display: block;
+	width: 150px;
+	padding: 10px 0;	
+	font-size: 16px;	
+	text-align: center;
+	text-decoration: none;	
+	background-color: #004d00;	
+	color: #ccffcc;
+	border: none;
+  	border-radius: 10px;
+  	box-shadow: 0 4px #e6ffe6;
+  	cursor: pointer;
+  	&:hover{
+		background-color: #008000; 
+	}
+	&active {
+	  background-color: #008000;
+	  box-shadow: 0 1.5px #e6ffe6;
+	  transform: translateY(2px);
+	}
+}
+
+/*.btnAdd:hover{
+	background-color: #4da6ff; 
+}
+.btnAdd:active {
+  background-color: #4da6ff;
+  box-shadow: 0 1.5px #d9d9d9;
+  transform: translateY(2px);
+}*/
