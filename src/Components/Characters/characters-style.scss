@@ -1,0 +1,45 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+  /*height: 300px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+	color: #004d00;
+	font-size: 30px;
+}
+.table{
+	width: 100%;
+	display: flex;	
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.card{
+	width: 18%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #ccffcc;
+	margin-bottom: 20px;
+	&__img{
+		display: block;
+		max-width: 70%;
+		margin-top: 20px;		
+	}
+	&__content{
+		margin-top: 20px;
+		color: #004d00;
+		text-align: center;
+	}
+	&__name{
+		font-size: 24px;
+	}
+	&__species{
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,41 @@
+/*.App {
+  text-align: center;
+}*/
+.wrapper{
+  width: 100%;  
+  min-height: 100vh;  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;  
+  position: relative; 
+}
+.bg-image{
+ width: 100%;  
+  min-height: 100vh;
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;    
+}
+
+.nav{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004d00;
+}
+
+.app-link{
+  display: inline-block;
+  padding: 0 15px;
+  color: #ccffcc;
+  text-decoration: none;
+}
+.active-link{
+  color: #00ff00;
+  text-decoration: none;
+}
+
+
