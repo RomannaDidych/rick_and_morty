@@ -1,0 +1,17 @@
+.rowLoc{
+	width: 100%;	
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;	
+	color: #004d00;
+	font-size: 18px;
+	border-bottom: 1px solid #004d00;
+	padding: 3px 0;
+	& div{		
+		width: 33%;			
+		text-align: left;
+	}	
+	&__name{
+		padding-left: 50px;
+	}
+}
