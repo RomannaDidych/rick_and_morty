@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Link, Redirect, NavLink} from 'react-router-dom';
-import Characters from './Components/Characters/Characters';
+import Characters from './Components/Characters/Characters/Characters';
 import Episodes from './Components/Episodes/Episodes';
 import Locations from './Components/Locations/Locations';
 import WatchList from './Components/WatchList/WatchList';
