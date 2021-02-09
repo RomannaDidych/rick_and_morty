@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/rick_and_morty/static/css/main.94c074b0.chunk.css",
-    "main.js": "/rick_and_morty/static/js/main.f2cfb315.chunk.js",
-    "main.js.map": "/rick_and_morty/static/js/main.f2cfb315.chunk.js.map",
-    "runtime-main.js": "/rick_and_morty/static/js/runtime-main.f8c5a6e3.js",
-    "runtime-main.js.map": "/rick_and_morty/static/js/runtime-main.f8c5a6e3.js.map",
-    "static/js/2.83cf135f.chunk.js": "/rick_and_morty/static/js/2.83cf135f.chunk.js",
-    "static/js/2.83cf135f.chunk.js.map": "/rick_and_morty/static/js/2.83cf135f.chunk.js.map",
-    "static/js/3.9c66598a.chunk.js": "/rick_and_morty/static/js/3.9c66598a.chunk.js",
-    "static/js/3.9c66598a.chunk.js.map": "/rick_and_morty/static/js/3.9c66598a.chunk.js.map",
+    "main.css": "/rick_and_morty/static/css/main.4b7b2df5.chunk.css",
+    "main.js": "/rick_and_morty/static/js/main.1d5bc7e6.chunk.js",
+    "main.js.map": "/rick_and_morty/static/js/main.1d5bc7e6.chunk.js.map",
+    "runtime-main.js": "/rick_and_morty/static/js/runtime-main.fbdeb8d8.js",
+    "runtime-main.js.map": "/rick_and_morty/static/js/runtime-main.fbdeb8d8.js.map",
+    "static/js/2.707f2188.chunk.js": "/rick_and_morty/static/js/2.707f2188.chunk.js",
+    "static/js/2.707f2188.chunk.js.map": "/rick_and_morty/static/js/2.707f2188.chunk.js.map",
+    "static/js/3.1fd7d1e9.chunk.js": "/rick_and_morty/static/js/3.1fd7d1e9.chunk.js",
+    "static/js/3.1fd7d1e9.chunk.js.map": "/rick_and_morty/static/js/3.1fd7d1e9.chunk.js.map",
     "index.html": "/rick_and_morty/index.html",
-    "static/css/main.94c074b0.chunk.css.map": "/rick_and_morty/static/css/main.94c074b0.chunk.css.map",
-    "static/js/2.83cf135f.chunk.js.LICENSE.txt": "/rick_and_morty/static/js/2.83cf135f.chunk.js.LICENSE.txt",
+    "static/css/main.4b7b2df5.chunk.css.map": "/rick_and_morty/static/css/main.4b7b2df5.chunk.css.map",
+    "static/js/2.707f2188.chunk.js.LICENSE.txt": "/rick_and_morty/static/js/2.707f2188.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/rick_and_morty/static/media/bg.5fa9835c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8c5a6e3.js",
-    "static/js/2.83cf135f.chunk.js",
-    "static/css/main.94c074b0.chunk.css",
-    "static/js/main.f2cfb315.chunk.js"
+    "static/js/runtime-main.fbdeb8d8.js",
+    "static/js/2.707f2188.chunk.js",
+    "static/css/main.4b7b2df5.chunk.css",
+    "static/js/main.1d5bc7e6.chunk.js"
   ]
 }
