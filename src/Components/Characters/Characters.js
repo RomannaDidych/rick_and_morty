@@ -20,13 +20,12 @@ class Characters extends Component{
         this.filteredCharacters = []        
         this.state = {        	
         	characters: []
-        }
-        //this.setMaxAmount();
+        }        
         this.getAllChracters();               
     }
 
 	getAllChracters = async (e) =>{
-		let arr =  Array.from({length:this.maxAmount}).map((arr, ind) =>  ind +1);  //this.currentNumber +					
+		let arr =  Array.from({length:this.maxAmount}).map((arr, ind) =>  ind +1);					
 		const response = await fetch(`${mainURL}${arr}`);		
 		const items = await response.json();
 		this.allChracters = items;
@@ -42,7 +41,7 @@ class Characters extends Component{
 				return;
 			}
 			this.currentNumber += 10;
-			newState = this.filteredCharacters.slice(this.currentNumber, this.currentNumber + countOnPage );// change allChracters to filteredCharacters
+			newState = this.filteredCharacters.slice(this.currentNumber, this.currentNumber + countOnPage );
 						
 		} else {
 			if (this.currentNumber <= 0){
@@ -53,29 +52,8 @@ class Characters extends Component{
 			
 		};
 		this.setState({characters: newState});
-	};	
-
-	/*setMaxAmount = async () =>{
-		const response = await fetch(mainURL);
-		const count = await response.json();
-		this.maxAmount = count.info.count;				
-	}
-
-	getPreviousArr = () => {
-		const arr = Array.from({length: countOnPage}).map((arr, ind) => this.currentNumber + ind - 9);
-		return arr;
-	}
-
-	getNextArr = () => {
-		const condition = this.maxAmount - this.currentNumber;
-		let arr =[];
-		if(condition >= countOnPage ) {
-			arr =  Array.from({length:countOnPage}).map((arr, ind) => this.currentNumber + ind +1);
-		} else {
-			arr =  Array.from({length:condition}).map((arr, ind) => this.currentNumber + ind +1);
-		}
-		return arr;
-	}*/
+	};
+	
 
 	setFilteredCharacters = () => {
 		let current = [];
@@ -96,8 +74,7 @@ class Characters extends Component{
 	}
 
 	selectStatus = (e) => {
-		this.filterStatus = e.target.value;
-		//console.log(this.filterStatus);
+		this.filterStatus = e.target.value;		
 		this.setFilteredCharacters();
 		const currentState = this.filteredCharacters.filter((obj, i) => i < countOnPage);
 		this.setState({characters: currentState});
@@ -105,8 +82,7 @@ class Characters extends Component{
 	}
 
 	selectGender = (e) => {
-		this.filterGender = e.target.value;
-		//console.log(this.filterStatus);
+		this.filterGender = e.target.value;		
 		this.setFilteredCharacters();
 		const currentState = this.filteredCharacters.filter((obj, i) => i < countOnPage);
 		this.setState({characters: currentState});
@@ -114,8 +90,7 @@ class Characters extends Component{
 	}
 
 	selectSpecies = (e) => {
-		this.filterSpecies = e.target.value;
-		//console.log(this.filterStatus);
+		this.filterSpecies = e.target.value;		
 		this.setFilteredCharacters();
 		const currentState = this.filteredCharacters.filter((obj, i) => i < countOnPage);
 		this.setState({characters: currentState});
@@ -125,30 +100,34 @@ class Characters extends Component{
 
 	render(){				
 		return (
-			<div className='container'>				
-								
+			<div className='container'>								
 				<div className= "buttons">
-					<button className= 'btn' onClick={this.changeItemsOnPage} value='previous'>previous characters</button>
+					<button className= 'btn' onClick={this.changeItemsOnPage} value='previous'> &#60;&#60;  previous</button>
 					<div className='selectors'>
 						<div className='selector'>
-							<select name="status" id="status" onChange={this.selectStatus}>
+							<label htmlFor="status" className='selector__label'>status:</label>
+							<select className='selector__select' name="status" id="status" onChange={this.selectStatus}>
 								<option value="all">all</option>
 								<option value="Alive">alive</option>
 								<option value="Dead">dead</option>
 								<option value="unknown">unknown</option>
 							</select>
+							<span className='selector__arrow'></span>
 						</div>
 						<div className='selector'>
-							<select name="gender" id="status" onChange={this.selectGender}>
+							<label htmlFor="gender" className='selector__label'>gender:</label>
+							<select className='selector__select' name="gender" id="gender" onChange={this.selectGender}>
 								<option value="all">all</option>
 								<option value="Male">male</option>
 								<option value="Female">female</option>
 								<option value="Genderless">genderless</option>
 								<option value="unknown">unknown</option>
 							</select>
+							<span className='selector__arrow'></span>
 						</div>
 						<div className='selector'>
-							<select name="species" id="status" onChange={this.selectSpecies}>
+							<label htmlFor="species" className='selector__label'>species:</label>
+							<select className='selector__select' name="species" id="species" onChange={this.selectSpecies}>
 								<option value="all">all</option>
 								<option value="Human">human</option>
 								<option value="Alien">alien</option>
@@ -162,9 +141,10 @@ class Characters extends Component{
 								<option value="Disease">disease</option>
 								<option value="Planet">planet</option>
 							</select>
+							<span className='selector__arrow'></span>
 						</div>
 					</div>
-					<button className= 'btn' onClick={this.changeItemsOnPage} value='next'>next characters</button>
+					<button className= 'btn' onClick={this.changeItemsOnPage} value='next'>next  &#62;&#62;</button>
 				</div>
 				<div className= 'table'>
 					{this.state.characters.map((hero) => <Card {...hero} key={hero.id} />)}
@@ -177,11 +157,3 @@ class Characters extends Component{
 
 export default Characters;
 
-//<button onClick={this.getChracters}>get Characters</button>
-//onClick={() =>{console.log(characters)}}
-//const response = await fetch(`https://rickandmortyapi.com/api/character/${Array.from({length: lengthArr}).map((arr, ind) => this.state.currentNumber + ind +1)}`);
-//const response = await fetch(`https://rickandmortyapi.com/api/character/${Array.from({length: 10}).map((arr, ind) => this.state.currentNumber + ind +1)}`);
-//<h2 className='title'>Characters</h2>
-/*<div className= 'table'>
-					{this.state.characters.map((hero) => <Card {...hero} key={hero.id} />)}
-				</div>	*/
