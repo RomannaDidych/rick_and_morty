@@ -1,0 +1,23 @@
+.row{
+	width: 100%;	
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;	
+	color: #004d00;
+	font-size: 18px;
+	border-bottom: 1px solid #004d00;
+	padding: 3px 0;
+	& div{		
+		text-align: left;
+	}
+	&__episode,
+	&__air_date{
+		width: 25%;
+	}
+	&__name{
+		width: 50%;
+	}
+	&__episode{
+		padding-left: 50px;
+	}
+}
