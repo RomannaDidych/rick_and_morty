@@ -41,7 +41,7 @@
 }
 
 .episodButtons{
-	width: 80%;
+	width: 90%;
 	margin: 30px auto;	
 	display: flex;
 	justify-content: space-between;
@@ -67,5 +67,29 @@
 	  background-color: #008000;
 	  box-shadow: 0 1.5px #e6ffe6;
 	  transform: translateY(2px);
+	}
+}
+.serch{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 30px;
+	& p{
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 600;
+		color: #004d00;
+		margin-right: 10px;
+	}
+	&__input{
+		width: 350px;
+		padding: 10px;
+		font-size: 20px;
+		color: #004d00;
+		background-color: #ccffcc;
+		border: 1px solid #008000;
+		&:focus{
+			box-shadow: 0 0 8px 8px #008000;
+		}
 	}
 }

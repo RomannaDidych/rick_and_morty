@@ -11,12 +11,10 @@ class Episodes extends Component {
     this.maxAmount = 41;
     this.currentNumber = 0;
     this.allEpisodes = [];
-    this.filteredEpisodes = [];
-    this.filterStatus = "all";
-    this.filterGender = "all";
-    this.filterSpecies = "all";
+    this.filteredEpisodes = [];   
     this.state = {
       episodes: [],
+      serch: ''
     };
     this.getAllEpisodes();
   }
@@ -55,6 +53,25 @@ class Episodes extends Component {
     this.setState({ episodes: newState });
   };
 
+  handleSearchChange = async (e) => {
+    await this.setState({ search: e.target.value });
+    this.filterNames();
+  };
+
+  filterNames = () => {
+    const currentSearch = this.state.search.toLowerCase().trim();  
+    let filteredNames = this.allEpisodes.filter(
+      (episode) =>
+        episode.name.toLowerCase().includes(currentSearch)
+    );
+    this.filteredEpisodes = filteredNames;
+    if (filteredNames !== []) {
+      this.setState({ episodes: filteredNames });
+    } else {
+      this.setState({ episodes: this.allEpisodes });
+    }
+  };
+
   render() {
     return (
       <div className="episodContainer">
@@ -67,7 +84,15 @@ class Episodes extends Component {
             {" "}
             &#60;&#60; previous
           </button>
-
+          <div className = 'serch'>
+          	<p>choose an episode title: </p>
+          	<input
+	          className="serch__input"
+	          type="text"
+	          value={this.state.search}
+	          onChange={this.handleSearchChange}
+        	/>
+          </div>
           <button className="btn" onClick={this.changeItemsOnPage} value="next">
             next &#62;&#62;
           </button>
@@ -75,7 +100,7 @@ class Episodes extends Component {
         <div className="episodTable">
           <div className="episodTable__head">
             <div className="episodTable__episode">episode</div>
-            <div className="episodTable__name">episodes name</div>
+            <div className="episodTable__name">episode title</div>
             <div className="episodTable__air_date">air date</div>
           </div>
           {this.state.episodes.map((film) => (

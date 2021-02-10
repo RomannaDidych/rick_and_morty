@@ -17,6 +17,9 @@ class Locations extends Component {
     this.filterSpecies = "all";
     this.state = {
       episodes: [],
+      serchName: '',
+      serchType: '',
+      serchDimention: ''
     };
     this.getAllLocations();
   }
@@ -63,8 +66,7 @@ class Locations extends Component {
             className="btn"
             onClick={this.changeItemsOnPage}
             value="previous"
-          >
-            {" "}
+          >            
             &#60;&#60; previous
           </button>
 

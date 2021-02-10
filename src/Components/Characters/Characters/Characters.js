@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import Card from "../Card/Card";
 import "./characters-style.scss";
 
@@ -57,8 +57,7 @@ class Characters extends Component {
   };
 
   setFilteredCharacters = () => {
-    let current = [];
-    //if((this.filterStatus === 'all') || (this.filterGander === 'all') || (this.filterSpecies !== 'all')){}
+    let current = [];    
     this.filteredCharacters = this.allChracters;
     if (this.filterStatus !== "all") {
       current = this.filteredCharacters.filter(
