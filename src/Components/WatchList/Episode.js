@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./watchList_style.scss";
-import del from "../../assets/icons/delete.png";
+import del from "../../assets/icons/delete_green.png";
 
 class Episode extends Component {
   render() {

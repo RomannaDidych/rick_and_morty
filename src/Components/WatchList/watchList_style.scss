@@ -88,14 +88,11 @@
 	}
 	&__inp:checked + &__label:before{
 		background-image: url('../../assets/icons/checkmark.png');
-  		background-size: cover;
-  		box-sizing: border-box;
-  		padding: 3px;
+  		background-size: cover;  		
 	}
 	&__label{
 		padding-left: 25px;
 	}
-
 	&__label:before{
 		content: '';
 		display:inline-block;
@@ -110,11 +107,15 @@
 		text-align: left;
 	}
 	&__del{		
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 35px;
 		padding: 0;
+		margin-right: 10px;
 		background-color: rgba(255,255,255, 0);
 		border: none;
+		& img{
+			width: 100%;
+		}
 	}
 }
 
