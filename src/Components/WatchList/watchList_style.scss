@@ -83,6 +83,27 @@
 		display: flex;
 		margin-right: 0;;
 	}
+	&__inp{
+		display: none;
+	}
+	&__inp:checked + &__label:before{
+		background-image: url('../../assets/icons/checkmark.png');
+  		background-size: cover;
+  		box-sizing: border-box;
+  		padding: 3px;
+	}
+	&__label{
+		padding-left: 25px;
+	}
+
+	&__label:before{
+		content: '';
+		display:inline-block;
+		width: 22px;
+		height: 22px;
+		background-color: #004d00;
+		vertical-align: middle;
+	}
 	&__name{
 		width:90%;
 		padding-left: 10px;

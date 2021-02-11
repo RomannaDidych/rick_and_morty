@@ -15,6 +15,7 @@ class Episode extends Component {
             name="complite"
             onChange={this.props.movie.changeComplete}
           />
+          <label className="episode__label" htmlFor={this.props.movie.prop.id}></label>
         </div>
         <div className="episode__name">
           <p>{this.props.movie.prop.name}</p>
