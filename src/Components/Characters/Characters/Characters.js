@@ -1,4 +1,5 @@
- import React, { Component } from "react";
+import React, { Component } from "react";
+import Modal from 'react-responsive-modal';
 import Card from "../Card/Card";
 import "./characters-style.scss";
 
@@ -18,6 +19,8 @@ class Characters extends Component {
     //this.filteredCharacters = []
     this.state = {
       characters: [],
+      open: false,
+      selectedCard: null
     };
     this.getAllChracters();
   }
@@ -109,7 +112,37 @@ class Characters extends Component {
     this.currentNumber = 0;
   };
 
+  /*onOpenModal = (i) => {
+    this.setState({
+      open: true,
+      selectedCard: i 
+    });
+    console.log('gggg')
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
+  renderModal = () => {
+     Check to see if there's a selected post. If so, render it.
+    if (this.state.selectedCard !== null) {
+      const card = this.state.characters[this.state.selectedCard];
+      return (
+        <div
+          
+        >
+          <p>name:   {card.name}</p>
+          <p>status:{this.state.characters.status}</p>
+          <p>species:{this.state.characters.species}</p>
+          <p>type:{this.state.characters.type}</p>          
+        </div>
+      );
+    }
+  }*/
+
   render() {
+   
     return (
       <div className="container">
         <div className="buttons">
@@ -194,9 +227,11 @@ class Characters extends Component {
             <Card {...hero} key={hero.id} />
           ))}
         </div>
+        
       </div>
     );
   }
 }
 
 export default Characters;
+//const { open } = this.state;

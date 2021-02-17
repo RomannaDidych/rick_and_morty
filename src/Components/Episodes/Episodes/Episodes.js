@@ -81,7 +81,7 @@ class Episodes extends Component {
             onClick={this.changeItemsOnPage}
             value="previous"
           >
-            {" "}
+            //{" "}
             &#60;&#60; previous
           </button>
           <div className = 'serch'>
