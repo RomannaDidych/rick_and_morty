@@ -70,8 +70,11 @@ class Locations extends Component {
     currentArr = this.filterTypes(currentArr);
     currentArr = this.filterDimensions(currentArr);
     this.filteredLocations = currentArr;
-    //this.currentNumber = 0;    
-    await  this.setState({ locations: currentArr }); 
+    const currentState = currentArr.filter(
+      (obj, i) => i < countOnPage
+    );
+    await  this.setState({ locations: currentState });
+    this.currentNumber = 0; 
   };
 
   filterNames = (arr) => {

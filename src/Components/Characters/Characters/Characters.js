@@ -15,8 +15,7 @@ class Characters extends Component {
     this.filteredCharacters = [];
     this.filterStatus = "all";
     this.filterGender = "all";
-    this.filterSpecies = "all";
-    //this.filteredCharacters = []
+    this.filterSpecies = "all";    
     this.state = {
       characters: [],
       open: false,

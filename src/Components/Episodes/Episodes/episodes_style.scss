@@ -73,13 +73,13 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-right: 30px;
+	/*margin-right: 20px;*/
 	& p{
 		display: inline-block;
 		font-size: 20px;
 		font-weight: 600;
 		color: #004d00;
-		margin-right: 10px;
+		margin-right: 5px;
 	}
 	&__input{
 		width: 350px;
